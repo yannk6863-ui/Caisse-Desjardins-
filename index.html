@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caisse Desjardins des Rivières — Espace client</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <main class="auth" id="screen-login">
+      <div class="auth-card">
+        <div class="brand">
+          <div class="logo">
+            <img class="logo-image" src="./logo-desjardins-couleur.webp" alt="Logo Desjardins" />
+          </div>
+          <div class="brand-text">
+            <h1>Caisse Desjardins des Rivières</h1>
+            <p>Espace client sécurisé</p>
+          </div>
+        </div>
+
+        <div class="bank-meta">
+          <div class="meta-row"><span>Adresse</span><strong>2287 avenue Chauveau, Québec (QC) G2C 0G7, Canada 🇨🇦</strong></div>
+          <div class="meta-row"><span>Tél. Caisse</span><strong>1-877-842-1214</strong></div>
+        </div>
+
+        <div class="notice">
+          <span class="pill">🔒 Connexion sécurisée</span>
+          <p>Accédez à vos comptes, cartes et opérations en toute confidentialité.</p>
+        </div>
+
+        <form id="login-form" class="form">
+          <label>
+            Identifiant / No de compte
+            <input type="text" id="login-id" placeholder="815-20359-391967-7" required />
+          </label>
+
+          <label>
+            Mot de passe
+            <input type="password" id="login-pass" placeholder="••••••••" required />
+          </label>
+
+          <button class="btn primary" type="submit">Se connecter</button>
+
+          <div class="row-between">
+            <a class="link" href="#" onclick="return false;">Mot de passe oublié</a>
+            <a class="link" href="#" onclick="return false;">Aide</a>
+          </div>
+
+          <div class="fineprint">
+             
+          </div>
+        </form>
+      </div>
+      <footer class="footer"> </footer>
+    </main>
+
+    <div class="shell hidden" id="screen-app">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="logo small">
+            <img class="logo-image" src="./logo-desjardins-couleur.webp" alt="Logo Desjardins" />
+          </div>
+          <div>
+            <div class="sb-title">Caisse Desjardins des Rivières</div>
+            <div class="sb-sub">Espace client</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active" data-route="dashboard">🏠 Tableau de bord</button>
+          <button class="nav-item" data-route="transfers">💸 Virements</button>
+          <button class="nav-item" data-route="cards">💳 Cartes</button>
+          <button class="nav-item" data-route="history">🧾 Historique</button>
+          <button class="nav-item" data-route="profile">👤 Profil</button>
+          <button class="nav-item" data-route="messages">📩 Messagerie</button>
+          <button class="nav-item" data-route="settings">⚙️ Sécurité</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="mini-card">
+            <div class="mini-title">Service</div>
+            <div class="mini-sub">1-877-842-1214</div>
+          </div>
+          <button class="btn subtle" id="logout">Se déconnecter</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <div class="hello">Bienvenue, <strong id="customer-name">—</strong></div>
+            <div class="subhello" id="customer-meta">—</div>
+          </div>
+
+          <div class="top-actions">
+            <div class="search">
+              <input id="search" type="text" placeholder="Rechercher une opération…" />
+            </div>
+            <button class="btn subtle" id="securityBtn">Conseils sécurité</button>
+          </div>
+        </header>
+
+        <section class="grid" id="view"></section>
+
+        <footer class="footer app-foot">
+           
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="modal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3 id="modal-title">Info</h3>
+          <button class="icon-btn" id="modal-close" aria-label="Fermer">✕</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-actions">
+          <button class="btn subtle" id="modal-ok">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
