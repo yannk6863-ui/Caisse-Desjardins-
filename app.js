@@ -47,7 +47,7 @@ function money(n){
 }
 
 function renderDashboard(view){
-  view.appendChild(card(7, "Aperçu", `
+  view.appendChild(card(7, "Aperçu", `      
     <div class="badge">✅ ${DEMO.account.status} • ${DEMO.account.label}</div>
     <div style="margin-top:10px" class="big">${money(DEMO.account.available)}</div>
     <div style="color: var(--muted); margin-top:6px; font-size:13px;">Solde disponible</div>
