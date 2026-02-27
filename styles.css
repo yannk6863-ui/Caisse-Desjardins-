@@ -262,3 +262,37 @@ input:focus{border-color:#B6E3D0; box-shadow:0 0 0 4px rgba(23,162,107,.12)}
   .sidebar{position:sticky; top:0; z-index:2; border-right:none; border-bottom:1px solid var(--line)}
   .search input{width: 48vw}
 }
+
+@media (max-width: 640px){
+  .content{padding:12px}
+  .sidebar{
+    position:static;
+    padding:12px;
+    gap:10px;
+  }
+  .nav{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding-bottom:4px;
+  }
+  .nav-item{
+    width:auto;
+    min-width:max-content;
+    white-space:nowrap;
+  }
+  .topbar{
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+  }
+  .hello{font-size:16px}
+  .search input{width:100%}
+  .grid{grid-template-columns:1fr}
+  .card{grid-column:1 / -1 !important}
+  .table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+}
